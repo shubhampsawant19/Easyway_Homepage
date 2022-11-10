@@ -1,24 +1,31 @@
 import React from "react";
 import BurgerMenu from "./components/BurgerMenu";
-import './App.css';
-import search from './search.png';
-import Uber from './Uber.jpeg';
-import repair from './repair.jpeg';
-import Services from './Services.jpeg';
-import Food from './Food.jpeg';
-import Logo from './Logo.jpeg';
-import Cleaning from './Cleaning.jpeg';
-import Grooming from './Grooming.jpeg';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import "./App.css";
+import search from "./search.png";
+import Uber from "./Uber.jpeg";
+import repair from "./repair.jpeg";
+import Services from "./Services.jpeg";
+import Food from "./Food.jpeg";
+import Cleaning from "./Cleaning.jpeg";
+import Grooming from "./Grooming.jpeg";
 
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardImage,
-  MDBBtn,
-  MDBRipple
-} from 'mdb-react-ui-kit';
+import Logo from "./Logo.jpeg";
+import Loc from "./navigation.png";
+
+import Cards from "./cards-512.webp"; 
+import Wifi from "./wifi.webp";
+import Cctv from "./cctv.jpeg";
+import Shifting from "./Shifting.jpeg";
+import Store from "./Store.jpeg";
+import Landline from "./Landline.jpeg";
+
+
+// import Col from 'react-bootstrap/Col';
+// import Row from 'react-bootstrap/Row';
+import CardGroup from 'react-bootstrap/CardGroup';
+
 
 export default function App() {
   React.useEffect(() => {
@@ -33,120 +40,196 @@ export default function App() {
       <BurgerMenu />
       <div>
         <header>
-          <h2 style={{ margin: 0 }}>Easyway</h2>
+          <h2 style={{ margin: 40 }}>
+            Easyway
+             <img src={search} alt="search img" align="right"></img>
+          </h2>
+          <img class="easyway" src={Logo} alt="Logo" align="center"></img>
         </header>
-        <img src={search} alt="search img" align="right"></img>
 
-        <img src={Logo} alt="Logo" align="right"></img>
+      {/* <Card style={{ width: '18rem' }}>
+      <Button variant="primary">
+      <Card.Img variant="top" src={Uber} />
+      <Card.Body>
+        <Card.Title>Uber</Card.Title>
+      </Card.Body>
+      </Button>
+    </Card> */}
 
-        <MDBCard>
-          <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-            <MDBCardImage src={ Uber } fluid alt='...' />
-          <a>
-            <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-          </a>
-          </MDBRipple>
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </MDBCardText>
-            <MDBBtn href='#'>Button</MDBBtn>
-          </MDBCardBody>
-        </MDBCard>
+<Button class='loc' style={{ margin: 20 }}>
+  <img src={Loc} alt='Navigation' align="left"></img>Location </Button>
 
-        <MDBCard>
-          <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-            <MDBCardImage src={Grooming} fluid alt='...' />
-          <a>
-            <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-          </a>
-          </MDBRipple>
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </MDBCardText>
-            <MDBBtn href='#'>Button</MDBBtn>
-          </MDBCardBody>
-        </MDBCard>
+<CardGroup style={{ margin: 20 }}>
+  <Button class='But'>
+      <Card align="center">
+        <Card.Img className="Image" variant="top" src={Uber} />
+        <Card.Body>
+         <Card.Title>Uber</Card.Title>
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+        </Card>
+        </Button>
 
-        <MDBCard>
-          <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-            <MDBCardImage src={repair} fluid alt='...' />
-          <a>
-            <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-          </a>
-          </MDBRipple>
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </MDBCardText>
-            <MDBBtn href='#'>Button</MDBBtn>
-          </MDBCardBody>
-        </MDBCard>
+        <Button class='But'>
+      <Card align="center">
+        <Card.Img className="Image" variant="top" src={repair} />
+        <Card.Body>
+          <Card.Title>Plumbing</Card.Title>
+        
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+      </Card>
+      </Button>
 
+      <Button class='But'>
+      <Card align="center">
+        <Card.Img className="Image" variant="top" src={Grooming} />
+        <Card.Body>
+          <Card.Title>Grooming</Card.Title>
+          
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+      </Card>
+      </Button>
 
-
-        <MDBCard>
-          <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-            <MDBCardImage src={Food} fluid alt='...' />
-          <a>
-            <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-          </a>
-          </MDBRipple>
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </MDBCardText>
-            <MDBBtn href='#'>Button</MDBBtn>
-          </MDBCardBody>
-        </MDBCard>
+      <Button class='But'>
+      <Card align="center">
+        <Card.Img className="Image" variant="top" src={Food} />
+        <Card.Body>
+          <Card.Title>Food</Card.Title>
+          
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+      </Card>
+      </Button>
 
 
-
-        <MDBCard>
-          <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-            <MDBCardImage src={Services} fluid alt='...' />
-          <a>
-            <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-          </a>
-          </MDBRipple>
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </MDBCardText>
-            <MDBBtn href='#'>Button</MDBBtn>
-          </MDBCardBody>
-        </MDBCard>
+      <Button class='But'>
+      <Card align="center">
+        <Card.Img className="Image" variant="top" src={Cleaning} />
+        <Card.Body>
+          <Card.Title>Cleaning</Card.Title>
+        
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+      </Card>
+      </Button>
 
 
-
-        <MDBCard>
-          <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-            <MDBCardImage src={Cleaning} fluid alt='...' />
-          <a>
-            <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-          </a>
-          </MDBRipple>
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </MDBCardText>
-            <MDBBtn href='#'>Button</MDBBtn>
-          </MDBCardBody>
-        </MDBCard>
+      <Button class='But'>
+      <Card align="center">
+        <Card.Img className="Image" variant="top" src={Services}  />
+        <Card.Body>
+          <Card.Title>Services</Card.Title>
+          
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+      </Card>
+      </Button>
+    </CardGroup>
 
 
 
+{/* Second line of the services */}
+
+
+
+<CardGroup style={{ margin: 40 }}>
+  <Button class='But'>
+      <Card align="center">
+        <Card.Img className="Image" variant="top" src={Cards} />
+        <Card.Body>
+         <Card.Title>Credit/Debit Cards</Card.Title>
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+        </Card>
+        </Button>
+
+        <Button class='But'>
+      <Card align="center">
+        <Card.Img className="Image" variant="top" src={Wifi} />
+        <Card.Body>
+          <Card.Title>Wifi</Card.Title>
+        
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+      </Card>
+      </Button>
+
+      <Button class='But'>
+      <Card align="center">
+        <Card.Img className="Image" variant="top" src={Cctv} />
+        <Card.Body>
+          <Card.Title>Cctv</Card.Title>
+          
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+      </Card>
+      </Button>
+
+      <Button class='But'>
+      <Card align="center">
+        <Card.Img className="Image" variant="top" src={Shifting} />
+        <Card.Body>
+          <Card.Title>Shifting</Card.Title>
+          
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+      </Card>
+      </Button>
+
+
+      <Button class='But'>
+      <Card align="center">
+        <Card.Img className="Image" variant="top" src={Store} />
+        <Card.Body>
+          <Card.Title>Store</Card.Title>
+        
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+      </Card>
+      </Button>
+
+
+      <Button class='But'>
+      <Card align="center">
+        <Card.Img className="Image" variant="top" src={Landline}  />
+        <Card.Body>
+          <Card.Title>Landline</Card.Title>
+          
+        </Card.Body>
+        {/* <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer> */}
+      </Card>
+      </Button>
+    </CardGroup>
+    
 
 
       </div>
     </div>
   );
-  
-}
+  }

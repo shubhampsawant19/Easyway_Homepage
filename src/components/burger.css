@@ -30,7 +30,7 @@
   .bm-menu {
     background: #373a47;
     padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
+    font-size: 2.0em;
   }
   
   .bm-item-list {
@@ -41,4 +41,16 @@
     display: block;
     color: #bdc3c7;
   }
+
+  .signup
+    {
+      height: 85;
+      flex: 1;
+      margin-bottom: 2000;
+      font-size: 30px;
+      background: #373a47;
+    padding: 2.5em 1.5em 0;
+    /* font-size: 2.0em; */
+  }
+  
   

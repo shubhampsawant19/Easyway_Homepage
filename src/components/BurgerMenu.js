@@ -1,6 +1,7 @@
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import "./burger.css";
+import Button from 'react-bootstrap/Button';
 
 const toggleMenu = ({ isOpen }) => {
   const menuWrap = document.querySelector(".bm-menu-wrap");
@@ -16,12 +17,14 @@ const BurgerMenu = () => {
       <a className="menu-item" href="/">
         Menu
       </a>
+      
       <a className="menu-item" href="/">
         Explore
       </a>
-      <a className="menu-item" href="/">
+      {/* <a className="menu-item" href="/" >
         Signup
-      </a>
+      </a> */}
+      <Button class='signup' align='bottom'>Signup</Button>
     </Menu>
   );
 };

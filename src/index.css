@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.easyway {
+  width: 300px;
+  height: 250px;
+}
+
+.text-muted{
+  width: 350px;
+  height: 300px;
+}
+
+.Image{
+  width: 100px;
+  height: 100px;
+}
+
+Card {position: absolute;
+width: 432px;
+height: 380px;
+left: -28px;
+top: 339px;
+} 
+
+
+
+

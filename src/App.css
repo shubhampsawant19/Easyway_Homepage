@@ -9,3 +9,15 @@ body {
 img{
   margin-right: 20px;
 }
+.But {
+  padding-top: 500px;
+  padding-right: 2000px;
+  padding-bottom: 500px;
+  padding-left: 2000px;
+  
+}
+
+.loc{
+  margin-top: 20px;
+  padding-bottom: 20px;
+} 
